@@ -26,7 +26,6 @@ def count(B: list[str]) -> dict[str, int]:
 
 def favorite_color(C: dict[str, str]) -> str:
     colors: list[str] = []
-    i: int = 0
     fav: str = ""
     for key in C:
         colors.append(C[key])
@@ -36,21 +35,20 @@ def favorite_color(C: dict[str, str]) -> str:
             fav = key
         if Rank[fav] < Rank[key]:
             fav = key
-        i += 1
     return fav
 
 
-def bin_len(D: list[str]) -> dict[int, str]:
+def bin_len(strings: list[str]) -> dict[int, set]:
     i: int = 0
-    count: dict[int, str] = {}
-    while i < len(D):
-        L: int = len(D[i])
-        print(L)
+    count: dict[int, set[str]] = {}
+    while i < len(strings):
+        string_length: int = len(strings[i])
+        print(string_length)
         print(count)
-        for L in count:
-            print("anotha one")
-            count[L] = f"{count[L]}" + f",{D[i]}"
-        count[len(D[i])] = D[i]
+        if string_length not in count:
+            count[string_length] = {strings[i]}
+        else:
+            count[string_length].add(strings[i])
         print(count)
         i += 1
-    return {0: ""}
+    return count
