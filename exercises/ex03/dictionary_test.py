@@ -9,13 +9,12 @@ __author__: str = "730597830"
 
 
 def test_invert() -> None:
-    assert invert({"a": "z", "b": "y", "c": "x"}) == {"z": "a", "y": "b", "x": "c"}:
-        
+    assert invert({"a": "z", "b": "y", "c": "x"}) == {"z": "a", "y": "b", "x": "c"}
 
 
 def test_count() -> None:
-    assert count(["a", "b", "c", "a", "b", "b", "c"]) == {"a": 2, "b": 3, "c": 2}:
-        
+    assert count(["a", "b", "c", "a", "b", "b", "c"]) == {"a": 2, "b": 3, "c": 2}
+
 
 def test_favorite_color() -> None:
     assert True
