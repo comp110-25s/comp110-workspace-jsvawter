@@ -54,7 +54,7 @@ def favorite_color(C: dict[str, str]) -> str:
 in a list of strings"""
 
 
-def bin_len(strings: list[str]) -> dict[int, set]:
+def bin_len(strings: list[str]) -> dict[int, set[str]]:
     i: int = 0
     count: dict[int, set[str]] = {}
     while i < len(strings):
