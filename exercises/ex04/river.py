@@ -65,3 +65,10 @@ Bear population: {len(self.bears)}"
         self.repopulate_bears()
         # Visualize River
         self.view_river()
+
+    def one_river_week(self):
+        i: int = 0
+        while i < 7:
+            self.one_river_day
+            i += 1
+        return None
