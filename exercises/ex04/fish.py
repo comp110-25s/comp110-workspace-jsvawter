@@ -6,7 +6,7 @@ __author__: str = "730597830"
 class Fish:
     age: int
 
-    def __init__(self, age: int):
+    def __init__(self):
         self.age = 0
         return None
 
