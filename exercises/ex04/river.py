@@ -20,7 +20,19 @@ class River:
         for _ in range(0, num_bears):
             self.bears.append(Bear(age=0, hungerscore=0))
 
-    def check_ages(self):
+    def check_ages(self, bears, fish):
+        bear_population: list[Bear] = self.bears
+        fish_population: list[Fish] = self.fish
+        i: int = 0
+        while i <= len(bears):
+            if bears[i][0] > 5:
+                bear_population.pop(i)
+            i += 1
+        i = 0
+        while i <= len(fish):
+            if fish[i] > 3:
+                fish_population.pop(i)
+            i += 1
         return None
 
     def bears_eating(self):
@@ -58,7 +70,7 @@ Bear population: {len(self.bears)}"
         # Remove hungry Bear's from River
         self.check_hunger()
         # Remove old Fish and Bear's from River
-        self.check_ages()
+        self.check_ages([], [])
         # Simulate Fish repopulation
         self.repopulate_fish()
         # Simulate Bear repopulation
