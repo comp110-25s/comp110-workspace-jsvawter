@@ -1,5 +1,7 @@
 """File to define Fish class."""
 
+__author__: str = "730597830"
+
 
 class Fish:
     age: int
