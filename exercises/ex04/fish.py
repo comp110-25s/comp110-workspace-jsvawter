@@ -1,6 +1,6 @@
-"""File to define Bear class."""
+"""File to define Fish class."""
 
-class Bear:
+class Fish:
     
     def __init__(self):
         return None
