@@ -36,6 +36,11 @@ class River:
         return None
 
     def view_river(self):
+        print(
+            f"~~~ Day {self.day}: ~~~ \
+Fish population: {len(self.fish)} \
+Bear population: {len(self.bears)}"
+        )
         return None
 
     def one_river_day(self):
