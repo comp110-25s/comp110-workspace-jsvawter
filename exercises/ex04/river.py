@@ -54,6 +54,11 @@ class River:
         return None
 
     def check_hunger(self):
+        i: int = 0
+        while i < len(self.bears):
+            if self.bears[i].hunger_score < 0:
+                self.bears.pop(i)
+            i += 1
         return None
 
     def repopulate_fish(self):
