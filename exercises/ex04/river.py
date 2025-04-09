@@ -64,9 +64,23 @@ class River:
         return None
 
     def repopulate_fish(self):
+        new_fish: Fish = Fish(0)
+        amount_new_fish: int = len(self.fish) // 2
+        i: int = 0
+        while i < amount_new_fish:
+            j: int = 0
+            while j < 4:
+                self.fish.append(new_fish)
+                j += 1
+            i += 1
         return None
 
     def repopulate_bears(self):
+        new_bear: Bear = Bear(0, 0)
+        amount_new_bears: int = len(self.bears) // 2
+        i: int = 0
+        while i < amount_new_bears:
+            self.bears.append(new_bear)
         return None
 
     def view_river(self):
