@@ -18,5 +18,5 @@ class Bear:
         return None
 
     def eat(self, num_fish: int):
-        self.hungerscore += num_fish
+        self.hunger_score += num_fish
         return None
