@@ -1,22 +1,10 @@
 """File to define River class."""
 
-from exercises.ex04.fish import Fish
-from exercises.ex04.bear import Bear
+# from exercises.ex04.fish import Fish
+# from exercises.ex04.bear import Bear
+from exercises.ex04.river import River
 
 
-class my_river:
-    fish1: Fish
-    fish2: Fish
-    fish3: Fish
-    fish4: Fish
-    fish5: Fish
-    fish6: Fish
-    fish7: Fish
-    fish8: Fish
-    fish9: Fish
-    fish10: Fish
-    bear1: Bear
-    bear2: Bear
+my_river: River = River(10, 2)
 
-    def view_river(self):
-        return None
+my_river.view_river()
