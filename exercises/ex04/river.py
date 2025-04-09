@@ -18,7 +18,7 @@ class River:
         for _ in range(0, num_fish):
             self.fish.append(Fish(age=0))
         for _ in range(0, num_bears):
-            self.bears.append(Bear(age=0, hungerscore=0))
+            self.bears.append(Bear(age=0, hunger_score=0))
 
     def check_ages(self, bears, fish):
         bear_population: list[Bear] = self.bears
@@ -35,6 +35,13 @@ class River:
             i += 1
         self.bears = bear_population
         self.fish = fish_population
+        return None
+
+    def remove_fish(self, amount: int):
+        i: int = 0
+        while i < amount:
+            self.fish.pop(i)
+            i += 1
         return None
 
     def bears_eating(self):

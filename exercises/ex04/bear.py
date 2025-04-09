@@ -5,7 +5,7 @@ class Bear:
     age: int
     hunger_score: int
 
-    def __init__(self, age: int, hungerscore: int):
+    def __init__(self, age: int, hunger_score: int):
         self.age = 0
         self.hunger_score = 0
         return None
