@@ -55,10 +55,12 @@ class River:
 
     def check_hunger(self):
         i: int = 0
-        while i < len(self.bears):
-            if self.bears[i].hunger_score < 0:
-                self.bears.pop(i)
+        bear_population: list[Bear] = self.bears
+        while i < len(bear_population):
+            if bear_population[i].hunger_score < 0:
+                bear_population.pop(i)
             i += 1
+        self.bears = bear_population
         return None
 
     def repopulate_fish(self):
