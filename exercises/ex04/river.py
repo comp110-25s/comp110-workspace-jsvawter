@@ -1,39 +1,43 @@
 """File to define River class."""
 
-from exercises.EX04.fish import Fish
-from exercises.EX04.bear import Bear
+from exercises.ex04.fish import Fish
+from exercises.ex04.bear import Bear
+
 
 class River:
-    
-    def __init__(self, num_fish: int, num_bears:int):
+    day: int
+    bears: list[Bear]
+    fish: list[Fish]
+
+    def __init__(self, num_fish: int, num_bears: int):
         """New River with num_fish Fish and num_bears Bears"""
         self.day: int = 0
         self.fish: list[Fish] = []
         self.bears: list[Bear] = []
         # populate the river with fish and bears
         for _ in range(0, num_fish):
-            self.fish.append(Fish())
+            self.fish.append(Fish(age=0))
         for _ in range(0, num_bears):
-            self.bears.append(Bear())
+            self.bears.append(Bear(age=0, hungerscore=0))
 
     def check_ages(self):
         return None
 
     def bears_eating(self):
         return None
-    
+
     def check_hunger(self):
         return None
-        
+
     def repopulate_fish(self):
         return None
-    
+
     def repopulate_bears(self):
         return None
-    
+
     def view_river(self):
         return None
-            
+
     def one_river_day(self):
         """Simulate one day of life in the river"""
         # Increase day by 1
@@ -56,4 +60,3 @@ class River:
         self.repopulate_bears()
         # Visualize River
         self.view_river()
-            
