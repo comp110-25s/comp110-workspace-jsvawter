@@ -45,6 +45,12 @@ class River:
         return None
 
     def bears_eating(self):
+        i: int = 0
+        while i < len(self.bears):
+            if len(self.fish) > 4:
+                self.bears[i].eat(3)
+                self.remove_fish(3)
+            i += 1
         return None
 
     def check_hunger(self):
