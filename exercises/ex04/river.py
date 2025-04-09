@@ -33,6 +33,8 @@ class River:
             if fish[i] > 3:
                 fish_population.pop(i)
             i += 1
+        self.bears = bear_population
+        self.fish = fish_population
         return None
 
     def bears_eating(self):
