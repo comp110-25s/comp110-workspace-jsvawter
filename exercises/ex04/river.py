@@ -13,8 +13,8 @@ class River:
     fish: list[Fish]
 
     def __init__(self, num_fish: int, num_bears: int):
-        """Initializer for the River class"""
-        """New River with num_fish Fish and num_bears Bears"""
+        """Initializer for the River class."""
+        """New River with num_fish Fish and num_bears Bears."""
         self.day: int = 0
         self.fish: list[Fish] = []
         self.bears: list[Bear] = []
@@ -25,7 +25,7 @@ class River:
             self.bears.append(Bear())
 
     def check_ages(self):
-        """Method to remove fish and bears that are old"""
+        """Method to remove fish and bears that are old."""
         bear_population: list[Bear] = []
         fish_population: list[Fish] = []
         i: int = 0
@@ -40,7 +40,7 @@ class River:
         return None
 
     def remove_fish(self, amount: int):
-        """Method to remove a certain amount of fish from self.fish"""
+        """Method to remove a certain amount of fish from self.fish."""
         i: int = 0
         while i < amount:
             self.fish.pop(i)
@@ -48,7 +48,7 @@ class River:
         return None
 
     def bears_eating(self):
-        """Method to show the effects of bears eating"""
+        """Method to show the effects of bears eating."""
         i: int = 0
         while i < len(self.bears):
             if len(self.fish) > 4:
@@ -58,7 +58,7 @@ class River:
         return None
 
     def check_hunger(self):
-        """Method to remove bears that have hunger scores below 0"""
+        """Method to remove bears that have hunger scores below 0."""
         i: int = 0
         bear_population: list[Bear] = self.bears
         while i < len(bear_population):
@@ -69,7 +69,7 @@ class River:
         return None
 
     def repopulate_fish(self):
-        """Method to demonstrate fish repopulation"""
+        """Method to demonstrate fish repopulation."""
         new_fish: Fish = Fish()
         amount_new_fish: int = len(self.fish) // 2
         i: int = 0
@@ -82,7 +82,7 @@ class River:
         return None
 
     def repopulate_bears(self):
-        """Method to demonstrate bear repopulation"""
+        """Method to demonstrate bear repopulation."""
         new_bear: Bear = Bear()
         amount_new_bears: int = len(self.bears) // 2
         i: int = 0
@@ -91,7 +91,7 @@ class River:
         return None
 
     def view_river(self):
-        """Method to give the day and population of each animal"""
+        """Method to give the day and population of each animal."""
         print(
             f"~~~ Day {self.day}: ~~~ \
 Fish population: {len(self.fish)} \
@@ -100,7 +100,7 @@ Bear population: {len(self.bears)}"
         return None
 
     def one_river_day(self):
-        """Simulate one day of life in the river"""
+        """Simulate one day of life in the river."""
         # Increase day by 1
         self.day += 1
         # Simulate one day for all Bears
@@ -123,7 +123,7 @@ Bear population: {len(self.bears)}"
         self.view_river()
 
     def one_river_week(self):
-        """Repeats the effects of one river day 7 times"""
+        """Repeats the effects of one river day 7 times."""
         while self.day < 8:
             self.one_river_day
             self.day += 1
