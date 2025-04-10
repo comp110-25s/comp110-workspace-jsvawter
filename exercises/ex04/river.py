@@ -92,12 +92,9 @@ class River:
 
     def view_river(self):
         """Method to give the day and population of each animal."""
-        print(
-            f"~~~ Day {self.day}: ~~~ \
-Fish population: {len(self.fish)} \
-Bear population: {len(self.bears)}"
-        )
-        return None
+        print(f"~~~ Day {self.day}: ~~~ ")
+        print(f"Fish population: {len(self.fish)}")
+        print(f"Bear population: {len(self.bears)}")
 
     def one_river_day(self):
         """Simulate one day of life in the river."""

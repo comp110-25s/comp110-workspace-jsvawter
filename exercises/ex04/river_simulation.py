@@ -1,6 +1,6 @@
 """File to define River class."""
 
-__author__: str = "730597830"
+__author__: str = "7305-97830"
 
 
 # from exercises.ex04.fish import Fish
