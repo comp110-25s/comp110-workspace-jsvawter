@@ -24,17 +24,14 @@ class River:
             self.bears.append(Bear())
 
     def check_ages(self):
-        bear_population: list[Bear] = self.bears
-        fish_population: list[Fish] = self.fish
+        bear_population: list[Bear] = []
+        fish_population: list[Fish] = []
         i: int = 0
-        while i <= len(bear_population):
-            if bear_population[i].age > 5:
-                bear_population.pop(i)
-            i += 1
-        i = 0
-        while i <= len(fish_population):
-            if fish_population[i].age > 3:
-                fish_population.pop(i)
+        while i <= len(self.bears):
+            if self.bears[i].age < 6:
+                bear_population.append(self.bears[i])
+            if self.fish[i].age < 4:
+                fish_population.append(self.fish[i])
             i += 1
         self.bears = bear_population
         self.fish = fish_population
