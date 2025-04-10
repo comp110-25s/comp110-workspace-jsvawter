@@ -118,8 +118,7 @@ Bear population: {len(self.bears)}"
         self.view_river()
 
     def one_river_week(self):
-        Day: int = 1
-        while Day < 8:
+        while self.day < 8:
             self.one_river_day
-            Day += 1
+            self.day += 1
         return None
