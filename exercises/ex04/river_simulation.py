@@ -8,6 +8,8 @@ __author__: str = "730597830"
 from exercises.ex04.river import River
 
 
+"""Functionality tests"""
+
 my_river: River = River(10, 2)
 
 print(my_river.view_river())
