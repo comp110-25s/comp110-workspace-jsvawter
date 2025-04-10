@@ -6,14 +6,12 @@ __author__: str = "730597830"
 class Fish:
     age: int
 
-    """Initializer for the Fish class"""
-
     def __init__(self):
+        """Initializer for the Fish class"""
         self.age = 0
         return None
 
-    """Effects of one day passing on any instance of Fish"""
-
     def one_day(self):
+        """Effects of one day passing on any instance of Fish"""
         self.age += 1
         return None
